@@ -1,6 +1,14 @@
 exports.largestPrimeFactor = function(n){
-  var primeNumber = 0;
-  // do your work here
+  var factors = [];
+  var divider = 2;
 
-  return primeNumber;
+  while (n > 1){
+    while((n % divider)=== 0){
+      factors.push(divider);
+      n /= divider;
+}
+divider += 1;
+
+  }
+  return factors[factors.length - 1];
 };
